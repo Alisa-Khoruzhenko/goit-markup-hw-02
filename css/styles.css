@@ -1,0 +1,226 @@
+:root {
+    --first-font: "Roboto", sans-serif;
+    --second-font: "Raleway", sans-serif;
+    --accent-color: #2196F3;
+}
+body {
+    font-family: var(--first-font);
+    color: #212121;
+    background: #E5E5E5;
+}
+.link {
+    text-decoration: none;
+}
+.list {
+    list-style: none;
+}
+
+/* ============== COMPONENTS ============== */
+
+.logo {
+    font-family: var(--second-font);
+    font-weight: 700;
+    font-size: 26px;
+    line-height: 1.19;
+    letter-spacing: 0.03em;
+}
+.logo-item {
+    color: #2196F3;
+}
+.logo-light-theme {
+    color: #000000;
+}
+.logo-dark-theme {
+    color: #FFFFFF;
+}
+.title {
+    font-family: var(--first-font);
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 1.17;
+    text-align: center;
+    letter-spacing: 0.03em;
+    color: #212121;
+}
+.modal-button {
+    font-family:inherit;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 1.9;
+    display: flex;
+    cursor: pointer;
+    align-items: center;
+    text-align: center;
+    letter-spacing: 0.06em;
+    color: #FFFFFF;
+    background: #2196F3;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+    border-radius: 4px;
+}
+.modal-button:hover,
+.modal-button:focus {
+    color:#FFFFFF;
+    background-color: #188CE8;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+    border-radius: 4px;
+}
+.tel-link {
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 1.14;
+    letter-spacing: 0.02em;
+    color: #757575;
+}
+.tel-link:hover,
+.tel-link:focus {
+    color: #2196F3;
+}
+
+/* ============== END COMPONENTS ============== */
+
+
+/* ============== HEADER ============== */
+
+.navigation-link {
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 1.14;
+    letter-spacing: 0.02em;
+    color: #212121;
+}
+.navigation-link:hover,
+.navigation-link:focus {
+    color: #2196F3;
+}
+
+/* ============== END HEADER ============== */
+
+
+/* ============== HERO ============== */
+
+.hero {
+    overflow: auto;
+    background-color: #2F303A;
+}
+.hero-title {
+    width: 696px;
+    top: 280px;
+    height: 120px;
+    left: 452px;
+    font-weight: 900;
+    font-size: 44px;
+    line-height: 1.36;
+    text-align: center;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    color: #FFFFFF;
+}
+
+/* ============== END HERO ============== */
+
+
+/* ============== ABOUT US ============== */
+
+.about-title {
+    font-family: var(--first-font);
+    font-weight: bold;
+    font-size: 14px;
+    line-height: 1.14;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+    color: #212121;
+}
+.suptitle {
+    font-family: var(--first-font);
+    font-size: 14px;
+    line-height: 1.71;
+    letter-spacing: 0.03em;
+    color: #757575;
+}
+
+/* ============== END ABOUT US ============== */
+
+
+/* ============== OUR WORK ============== */
+
+
+/* ============== END OUR WORK ============== */
+
+
+/* ============== OUR COMMAND ============== */
+
+.profession-command {
+    font-family: var(--first-font);
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 1.18;
+    letter-spacing: 0.03em;
+    color: #212121;
+}
+.profession {
+    font-family: var(--first-font);
+    font-size: 16px;
+    line-height: 1.18;
+    letter-spacing: 0.03em;
+    color: #757575;
+}
+
+/* ============== END OUR COMMAND ============== */
+
+
+/* ============== PORTFOLIO ============== */
+
+.portfolio-name {
+    font-family: var(--first-font);
+    font-weight: bold;
+    font-size: 18px;
+    line-height: 2;
+    letter-spacing: 0.06em;
+    color: #212121;
+}
+.description {
+    font-family: var(--first-font);
+    font-size: 16px;
+    line-height: 1.87;
+    letter-spacing: 0.03em;
+    color: #757575;
+}
+.button {
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 1.625;
+    text-align: center;
+    letter-spacing: 0.03em;
+    cursor: pointer;
+    color: #212121;
+    background: #f5f4fa;
+}
+.button:hover,
+.button:focus {
+   color: #ffffff;
+   background:#2196F3;
+}
+
+/* ============== END PORTFOLIO ============== */
+
+
+
+/* ============== FOOTER ============== */
+
+.footer {
+    overflow: auto;
+    background: #2F303A;
+}
+.contact-link {
+    font-family: var(--first-font);
+    font-size: 14px;
+    line-height: 1.71;
+    letter-spacing: 0.03em;
+    color: rgba(255, 255, 255, 0.6);
+}
+.contact-link:hover,
+.contact-link:focus {
+    color:#2196F3;
+}
+
+/* ============== END FOOTER ============== */
