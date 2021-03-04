@@ -15,19 +15,77 @@ body {
     font-family: var(--first-font);
     background: var(--main-color);
 }
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+    margin: 0;
+}
+ul,
+ol {
+    margin: 0;
+    padding: 0;
+}
+img {
+    display: block;
+    max-width: 100%;
+}
 .link {
     text-decoration: none;
 }
 .list {
     list-style: none;
+    padding: 0;
+    margin: 0;
+}
+.visually-hidden {
+    position: absolute !important;
+    clip: rect(1px 1px 1px 1px); /* IE6 IE7 */
+    clip: rect(1px 1px 1px 1px);
+    padding: 0 !important;
+    border: 0 !important;
+    height: 1px !important;
+    width: 1px !important;
+    overflow: hidden;
 }
 .link.current {
     color: var(--accent-color);
 }
+.container {
+    width: 1200px;
+    margin: 0 auto;
+    padding-left: 15px;
+    padding-right: 15px;
+}
 
 /* ============== COMPONENTS ============== */
 
+.modal-button {
+    min-width: 200px;
+    padding: 10px 32px;
+
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 1.9;
+    letter-spacing: 0.06em;
+    cursor: pointer;
+
+    color: var(--main-color);
+    background: var(--accent-color);
+}
+.modal-button:hover,
+.modal-button:focus {
+    color: var(--main-color);
+    background-color: var(--active-modal-button);
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+    border-radius: 4px;
+}
 .logo {
+    margin-right: 93px;
     font-family: var(--second-font);
     font-weight: 700;
     font-size: 26px;
@@ -52,28 +110,43 @@ body {
     letter-spacing: 0.03em;
     color: var(--navigation-color);
 }
-.modal-button {
-    font-family: inherit;
-    font-weight: 700;
-    font-size: 16px;
-    line-height: 1.9;
-    display: flex;
-    cursor: pointer;
-    align-items: center;
-    text-align: center;
-    letter-spacing: 0.06em;
-    color: var(--main-color);
-    background: var(--accent-color);
-    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
-    border-radius: 4px;
-    cursor: pointer;
+
+
+/* ============== END COMPONENTS ============== */
+
+
+/* ============== HEADER ============== */
+
+.header {
+    padding-top: 32px;
+    padding-bottom: 32px;
+    background-color: #ccc;
 }
-.modal-button:hover,
-.modal-button:focus {
-    color: var(--main-color);
-    background-color: var(--active-modal-button);
-    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
-    border-radius: 4px;
+.header > .container {
+    display: flex;
+    align-items: center;
+}
+.header-nav {
+    display: flex;
+    align-items: center;
+}
+.navigation-list {
+    display: flex;
+    align-items: center;
+}
+.navigation-list > .navigation-item:not(:last-child) {
+    margin-right: 50px;
+}
+.navigation-link {
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 1.14;
+    letter-spacing: 0.02em;
+    color: var(--navigation-color);
+}
+.navigation-link:hover,
+.navigation-link:focus {
+    color: var(--accent-color);
 }
 .tel-link {
     font-weight: 500;
@@ -86,35 +159,31 @@ body {
 .tel-link:focus {
     color: var(--accent-color);
 }
-
-/* ============== END COMPONENTS ============== */
-
-
-/* ============== HEADER ============== */
-
-.navigation-link {
-    font-weight: 500;
-    font-size: 14px;
-    line-height: 1.14;
-    letter-spacing: 0.02em;
-    color: var(--navigation-color);
+.site-nav {
+    display: flex;
+    margin-left: auto;
+    margin-right: 50px;
 }
-.navigation-link:hover,
-.navigation-link:focus {
-    color: var(--accent-color);
+.site-nav > .tel-item:not(:last-child) {
+    margin-right: 50px;
 }
+
+
 
 /* ============== END HEADER ============== */
 
 
 /* ============== HERO ============== */
 
+.hero-container {
+    width: 1200;
+}
 .hero {
     overflow: auto;
     background-color: var(--background-hero);
+    padding: 200px;
 }
 .hero-title {
-
     font-weight: 900;
     font-size: 44px;
     line-height: 1.36;
@@ -157,28 +226,78 @@ body {
 
 /* ============== OUR COMMAND ============== */
 
+.our-command {
+    border: 10px solid var(--background-command);
+    padding-top: 186px;
+    padding-bottom: 94px;
+    padding-left: 215px;
+    padding-right: 215px;
+    background-color: var(--background-command);
+}
+.command-list > .frame {
+    margin-left: 20px;
+    margin-top: 20px;
+}
 .profession-command {
     font-family: var(--first-font);
     font-weight: 500;
     font-size: 16px;
     line-height: 1.18;
+    text-align: center;
     letter-spacing: 0.03em;
     color: var(--navigation-color);
+    margin-top: 10px;
 }
 .profession {
     font-family: var(--first-font);
     font-size: 16px;
     line-height: 1.18;
+    text-align: center;
     letter-spacing: 0.03em;
     color: var(--tel-color);
+    margin-top: 10px;
 }
-.command {
-    background-color: var(--background-command);
+
+.command-list {
+    columns: 4;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.frame {
+    background: var(--main-color);
+    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
+    border-radius: 0px 0px 4px 4px;
+    width: 270px;
+    height: 368px;
+    left: 815px;
+    top: 1635px;
 }
 /* ============== END OUR COMMAND ============== */
 
 
 /* ============== PORTFOLIO ============== */
+
+.portfolio-list {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+}
+.portfolio-list > .portfolio-item {
+    flex-basis: calc(100% / 3);
+}
+.portfolio-item {
+    width: 370px;
+    height: 404px;
+    left: 615px;
+    top: 262px;
+}
+    /*background: #FFFFFF;
+    border: 1px solid #EEEEEE;
+    box-sizing: border-box;
+}*/
 
 .portfolio-name {
     font-family: var(--first-font);
@@ -210,9 +329,6 @@ body {
    color: var(--main-color);
    background: var(--accent-color);
 }
-.hidden {
-    display: none;
-}
 
 /* ============== END PORTFOLIO ============== */
 
@@ -229,11 +345,21 @@ body {
     font-size: 14px;
     line-height: 1.71;
     letter-spacing: 0.03em;
-    color: var(--contact-link);
+    color: var(--main-color);
 }
 .contact-link:hover,
 .contact-link:focus {
     color: var(--accent-color);
 }
-
+.foot-link {
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 1.14;
+    letter-spacing: 0.03em;
+    color: var(--contact-link);
+}
+.foot-link:hover,
+.foot-link:focus {
+    color: var(--accent-color);
+}
 /* ============== END FOOTER ============== */
