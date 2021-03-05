@@ -64,26 +64,7 @@ img {
 
 /* ============== COMPONENTS ============== */
 
-.modal-button {
-    min-width: 200px;
-    padding: 10px 32px;
 
-    font-weight: 700;
-    font-size: 16px;
-    line-height: 1.9;
-    letter-spacing: 0.06em;
-    cursor: pointer;
-
-    color: var(--main-color);
-    background: var(--accent-color);
-}
-.modal-button:hover,
-.modal-button:focus {
-    color: var(--main-color);
-    background-color: var(--active-modal-button);
-    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
-    border-radius: 4px;
-}
 .logo {
     margin-right: 93px;
     font-family: var(--second-font);
@@ -102,6 +83,8 @@ img {
     color: var(--main-color);
 }
 .title {
+    margin-bottom: 50px;
+    padding-top: 47px;
     font-family: var(--first-font);
     font-weight: 700;
     font-size: 36px;
@@ -111,7 +94,6 @@ img {
     color: var(--navigation-color);
 }
 
-
 /* ============== END COMPONENTS ============== */
 
 
@@ -120,11 +102,11 @@ img {
 .header {
     padding-top: 32px;
     padding-bottom: 32px;
-    background-color: #ccc;
 }
 .header > .container {
     display: flex;
     align-items: center;
+    justify-content: space-between;
 }
 .header-nav {
     display: flex;
@@ -148,42 +130,45 @@ img {
 .navigation-link:focus {
     color: var(--accent-color);
 }
+.site-nav {
+    display: flex;
+    align-items: center;
+}
+.site-nav > .list:not(:last-child) {
+    margin-right: 50px;
+}
 .tel-link {
     font-weight: 500;
     font-size: 14px;
     line-height: 1.14;
     letter-spacing: 0.02em;
     color: var(--tel-color);
+    margin-left: auto;
+    margin-right: 50px;
 }
 .tel-link:hover,
 .tel-link:focus {
     color: var(--accent-color);
 }
-.site-nav {
-    display: flex;
-    margin-left: auto;
-    margin-right: 50px;
-}
-.site-nav > .tel-item:not(:last-child) {
-    margin-right: 50px;
-}
-
-
 
 /* ============== END HEADER ============== */
 
-
 /* ============== HERO ============== */
 
-.hero-container {
-    width: 1200;
-}
 .hero {
     overflow: auto;
     background-color: var(--background-hero);
     padding: 200px;
 }
+.hero-container {
+    width: 1200px;
+    margin: 0 auto;
+}
 .hero-title {
+    max-width: 696px;
+    margin: 0 auto;
+    margin-bottom: 30px;
+    
     font-weight: 900;
     font-size: 44px;
     line-height: 1.36;
@@ -192,13 +177,49 @@ img {
     text-transform: uppercase;
     color: var(--main-color);
 }
+.modal-button {
+    padding: 10px 32px;
+    display: block;
+    margin: auto;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 1.9;
+    letter-spacing: 0.06em;
+    cursor: pointer;
+
+    color: var(--main-color);
+    background: var(--accent-color);
+}
+.modal-button:hover,
+.modal-button:focus {
+    color: var(--main-color);
+    background-color: var(--active-modal-button);
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+    border-radius: 4px;
+}
 
 /* ============== END HERO ============== */
 
 
 /* ============== ABOUT US ============== */
 
-.about-title {
+.about {
+    padding-top: 94px;
+    padding-bottom: 47px;
+}
+.about-list {
+    display: flex;
+    
+    margin-top: -20px;
+    margin-left: -20px;
+}
+.about-us-list {
+   margin-left: 20px;
+   margin-top: 20px;
+   flex-basis: calc(100% / 4 -20px);
+}
+.about-list .about-title {
+    margin-bottom: 10px;
     font-family: var(--first-font);
     font-weight: 700;
     font-size: 14px;
@@ -220,6 +241,20 @@ img {
 
 /* ============== OUR WORK ============== */
 
+.work {
+    padding-bottom: 94px;
+}
+.title-list {
+    display: flex;
+    margin-left: -30px;
+    margin-top: -30px;
+}
+.work-images {
+    margin-left: 30px;
+    margin-top: 30px;
+    flex-basis: calc(100% / 3 -30px);
+}
+
 
 /* ============== END OUR WORK ============== */
 
@@ -227,16 +262,27 @@ img {
 /* ============== OUR COMMAND ============== */
 
 .our-command {
-    border: 10px solid var(--background-command);
-    padding-top: 186px;
+    
+    padding-top: 93px;
     padding-bottom: 94px;
-    padding-left: 215px;
-    padding-right: 215px;
     background-color: var(--background-command);
 }
-.command-list > .frame {
-    margin-left: 20px;
-    margin-top: 20px;
+.our-command > .title {
+    margin-bottom: 44px;
+}
+.command-list {
+    display: flex;
+    flex-direction: wrap;
+    margin-left: -30px;
+    margin-top: -30px;
+}
+.frame {
+    flex-basis: calc(100% / 4 -30px);
+    margin-left: 30px;
+    margin-top: 30px;
+    background: var(--main-color);
+    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
+    border-radius: 0px 0px 4px 4px;
 }
 .profession-command {
     font-family: var(--first-font);
@@ -246,7 +292,6 @@ img {
     text-align: center;
     letter-spacing: 0.03em;
     color: var(--navigation-color);
-    margin-top: 10px;
 }
 .profession {
     font-family: var(--first-font);
@@ -257,21 +302,9 @@ img {
     color: var(--tel-color);
     margin-top: 10px;
 }
-
-.command-list {
-    columns: 4;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-}
-.frame {
-    background: var(--main-color);
-    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
-    border-radius: 0px 0px 4px 4px;
-    width: 270px;
-    height: 368px;
-    left: 815px;
-    top: 1635px;
+.name {
+    margin-top: 30px;
+    margin-bottom: 30px;
 }
 /* ============== END OUR COMMAND ============== */
 
@@ -333,10 +366,17 @@ img {
 /* ============== END PORTFOLIO ============== */
 
 
-
 /* ============== FOOTER ============== */
 
+.web {
+    margin-bottom: 20px;
+}
+.contact-list-item:not(:last-child) {
+    margin-bottom: 9px;
+}
 .footer {
+    padding-top: 60px;
+    padding-bottom: 60px;
     overflow: auto;
     background: var(--background-hero);
 }
@@ -352,7 +392,7 @@ img {
     color: var(--accent-color);
 }
 .foot-link {
-    font-weight: 500;
+    font-weight: 400;
     font-size: 14px;
     line-height: 1.14;
     letter-spacing: 0.03em;
@@ -362,4 +402,5 @@ img {
 .foot-link:focus {
     color: var(--accent-color);
 }
+
 /* ============== END FOOTER ============== */
